@@ -6,3 +6,90 @@
 // 0,0,0,1,0 burada sonuncu buluda 3 və 2 addıma gəlmək olar. cavab 2-dir. Çünki 1 ci buluddan 3 cü buluda bir başa keçid etmək olar
 // 0,1,0,1,0 burada sonuncu buluda 2 addıma gəlmək olar çünki ardıcıl təhlükəsiz bulud yoxdur
 //c=[0 ,0 ,1, 0, 0, 1, 0] bu Arreydə başdan sona neçə addıma gəlmək olar tapın//
+let b = [
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  1,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  1,
+  0,
+  ,
+  0,
+  0,
+  1,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  1,
+  0,
+  1,
+  0,
+  0,
+];
+function jumpingOnClouds(c) {
+  let say = 0;
+  for (let i = 0; i < c.length - 1; i++) {
+    if (c[i] == 0) {
+      if (c[i + 1] == 0 || c[i + 1] == 1) {
+        say++;
+        if (c[i + 1] == 0 && c[i + 2] == 0 && c[i - 1] !== 0) {
+          say--;
+          if (c[i + 1] == 0 && c[i + 2] == 0 && c[i + 3] == 0) {
+            say--;
+          }
+        }
+      }
+    }
+  }
+  console.log(say);
+}
+jumpingOnClouds(b);
+
+// Hackerrank saytinda kod hissesine altdaki metni yazmaq lazimdir
+//
+//
+//  let say = 0;
+//   for (let i = 0; i < c.length - 1; i++) {
+//     if (c[i] == 0) {
+//       if (c[i + 1] == 0 || c[i + 1] == 1) {
+//         say++;
+//         if (c[i + 1] == 0 && c[i + 2] == 0) {
+//           say--;
+//         }
+//       }
+//     }
+//   }
+//   return say;
