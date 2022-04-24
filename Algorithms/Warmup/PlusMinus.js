@@ -1,3 +1,4 @@
+// ALL - OK
 let ar = [-4, 3, -9, 0, 4, 1];
 console.log(ar.length);
 
